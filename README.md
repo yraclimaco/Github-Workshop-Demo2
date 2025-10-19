@@ -6,35 +6,22 @@ This tutorial walks you through simulating a **merge conflict** and resolving it
 
 These steps are to be done by **One** Person in your group. The other person will have things to do in the future don't worry! Please be sure to pay attention though.
 
-### 🚀 Step 1. Create a GitHub Repository
+### 🚀 Step 1. Fork this Repository
 
-1. Go to [GitHub](https://github.com) and click **New Repository**.
-2. Name it something like: DS3-Demo2
-3. Make sure repository access is set to **Public**
+1. You can fork this repository by clicking the fork icon at the top. This will copy the repository into your Github account.
 
 ### 💻 Step 2. Clone Your Repository Locally
 
-Open your terminal (or Git Bash), then run:
-
+1. Expand the code button, select HTTPS, and copy the url.
+2. Open your terminal (or Git Bash), then run:
 ```bash
-git clone https://github.com/<your-username>/DS3-Demo2.git
-cd git-merge-practice
+git clone <url>
+cd Github-Workshop-Demo2
 ```
 
-### 📝 Step 3. Add This README
+### Step 3.📝 Create a file
 
-1. Download this README file and place it into the folder you just created on your laptop
-2. Add and commit your file
-
-```bash
-git add .
-git commit -m "Add README"
-git push
-```
-
-### Step 4.📝 Another file
-
-1. Create a text file and name it adventure.txt
+1. Create a text file called adventure.txt using the `touch` command
 2. Add and commit your file
 
 ```bash
@@ -51,10 +38,10 @@ Follow the steps in section 1.2 to clone the same repository to your local worki
 
 ### Step 2: (Person 1&2) Create a new Branch
 
-Create your own branches and switch to it
+Create your own branches **with different names** and switch to it. The `-b` flag is a shortcut from doing `git branch [branch_name]` first.
 
 ```bash
-git checkout -b [Your_Name]
+git checkout -b [branch_name]
 ```
 
 ### Step 2: Edits!
@@ -76,7 +63,7 @@ git commit -m "updates!"
 push your new changes
 
 ```bash
-git push -u origin [Your_Name]
+git push
 ```
 
 ### Step 3: Merge and conflicts
@@ -90,14 +77,13 @@ git checkout main
 try to merge both of your changes to main, Person 2 followed by Person 1
 
 ```bash
-git merge [Your_Name]
-
+git merge [branch_name]
 ```
 
 you should see, and on VSCode, adventures.txt will open with the conflicts
 
 ```bash
-Auto-merging story.txt
+Auto-merging adventure.txt
 CONFLICT (content): Merge conflict in story.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
@@ -131,6 +117,6 @@ git push
 If you’re done with the exercise, you can delete your branches:
 
 ```bash
-git branch -d [Your_Name]
-git push origin --delete [Your_Name]
+git branch -d [branch_name]
+git push origin --delete [branch_name]
 ```
