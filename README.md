@@ -68,21 +68,28 @@ push your new changes
 git push
 ```
 
-### Step 4: Merge and conflicts
+### Step 5: Pull Request
 
-Go back to the main branch
+Person 1 ones a pull request, adds a short description, and adds Person 2 as a reviewer.
+
+Person 2 goes to Changed Files, reviews the changes and merge the pull request. You should have no conflicts at this point.
+
+### Step 6: Merge and conflicts
+
+Person 2 goes back to the main branch and pull the new changes
 
 ```bash
 git checkout main
+git pull
 ```
 
-try to merge both of your changes to main, Person 2 submitting a PR after Person 1 pushes to main
+Person 2 tries to merge their branch into main.
 
 ```bash
 git merge [branch_name]
 ```
 
-you should see, and on VSCode, adventures.txt will open with the conflicts
+You should see, and on VSCode, adventures.txt will open with the conflicts
 
 ```bash
 Auto-merging adventure.txt
