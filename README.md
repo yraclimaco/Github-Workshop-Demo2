@@ -31,12 +31,14 @@ git push
 ```
 
 ## Section 2: Branching, Merging and Merge Conflicts
+### Step 1: Add as a collaborator!
+Person 1, add person 2 as a collaborator on your new github repo!
 
-### Step 1: Person 2, Clone the same repository
+### Step 2: Person 2, Clone the same repository
 
 Follow the steps in section 1.2 to clone the same repository to your local working environment.
 
-### Step 2: (Person 1&2) Create a new Branch
+### Step 3: (Person 1&2) Create a new Branch
 
 Create your own branches **with different names** and switch to it. The `-b` flag is a shortcut from doing `git branch [branch_name]` first.
 
@@ -44,7 +46,7 @@ Create your own branches **with different names** and switch to it. The `-b` fla
 git checkout -b [branch_name]
 ```
 
-### Step 2: Edits!
+### Step 4: Edits!
 
 On your local adventure.txt files, write these edits to them
 
@@ -66,7 +68,7 @@ push your new changes
 git push
 ```
 
-### Step 3: Merge and conflicts
+### Step 4: Merge and conflicts
 
 Go back to the main branch
 
@@ -74,7 +76,7 @@ Go back to the main branch
 git checkout main
 ```
 
-try to merge both of your changes to main, Person 2 followed by Person 1
+try to merge both of your changes to main, Person 2 submitting a PR after Person 1 pushes to main
 
 ```bash
 git merge [branch_name]
@@ -99,7 +101,7 @@ The Hero finds a magical sword.
 The Hero swings and misses
 ```
 
-then mark it resolved and commit on main:
+then mark it resolved and commit confirm merge on VScode.
 
 ```bash
 git add adventure.txt
